@@ -1,0 +1,87 @@
+/* estilos main envíos */
+.envíos {
+    margin-top: 45%;
+
+    h2 {
+        @include letras;
+        font-weight: bolder;
+        font-size: 1rem;
+        margin: 0% 3% 3% 7%;
+
+        @include celularHorizontal {
+            margin: 0% 7% 3% 6%;
+        }
+
+        @include pantallaGrande {
+            font-size: 1.3rem;
+            margin: 0% 7% 3% 0%;
+        }
+
+        @include pantallaPanoramica {
+            font-size: 1.5rem;
+            margin: 20% 0% 1% 0%;
+        }
+    }
+
+    .textoEnvíos {
+        @include letras;
+        font-weight: 500;
+        font-size: 1rem;
+        margin: 0% 7% 2% 7%;
+
+        @include celularHorizontal {
+            margin: 0% 7% 0% 6%;
+        }
+
+        @include pantallaGrande {
+            margin: 0% 7% 3% 0%;
+        }
+    }
+
+    @include celularHorizontal {
+        margin: 20% 3% 3% 3%;
+    }
+
+    @include pantallaMediana {
+        margin: 15% 3% 3% 3%;
+    }
+
+    @include pantallaGrande {
+        font-size: 1.3rem;
+        margin: 22% 7% 1% 7%;
+    }
+
+    @include pantallaPanoramica {
+        font-size: 1.5rem;
+        margin: 15% 7% 2% 7%;
+    }
+}
+
+.cobertura {
+    h3 {
+    @include letras;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: left;
+    margin: 4% 0% 4% 7%;
+
+    @include pantallaGrande {
+        font-size: 1.2rem;
+        margin: 0% 7% 1% 6%;
+    }
+    }
+    
+    img {
+        width: 87%;
+        margin: 0% 7% 5% 7%;
+
+        @include pantallaGrande {
+            width: 50%;
+            margin: 0% 7% 3% 6%;
+        }
+    }
+
+    @include celularHorizontal {
+        margin-left: 1%;
+    }
+}

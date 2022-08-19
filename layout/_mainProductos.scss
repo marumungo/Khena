@@ -1,0 +1,114 @@
+/* estilos main productos */
+.productos {
+    margin: 45% 0% 3% 12%;
+    display: grid;
+    grid-template-areas:
+    "productos"
+    "imagenes"
+    "imagenes"
+    "imagenes"
+    "imagenes"
+    "imagenes"
+    "imagenes";
+    grid-template-columns: 1fr;
+
+    h2 {
+        @include letras;
+        font-weight: bolder;
+        font-size: 1rem;
+        text-align: left;
+        margin: 0% 0% 3% 0%;
+        grid-area: productos;
+
+        @include celularHorizontal {
+            margin: 0% 7% 1% 0%;
+        }
+
+        @include pantallaGrande {
+            font-size: 1.3rem;
+            margin: 0% 7% 1% 3%;
+        }
+
+        @include pantallaPanoramica {
+            font-size: 1.5rem;
+            margin: 2% 7% 1% 7%;
+        }
+    }
+
+    .cardsProductos {
+        margin: 0% 15% 2% 0%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        div {
+            margin-bottom: 3%;
+
+            img {
+                width: 100%;
+                margin: 0%;
+                grid-area: imagenes;
+            }
+
+            p {
+                @include letras;
+            }
+
+            h5 {
+                @include letras;
+            }
+
+            .btn {
+                @include botones;
+            }
+
+            @include pantallaGrande {
+                picture {
+                    margin: 0% 0% 1% 0%;
+                }
+            }
+        }
+
+        @include pantallaGrande {
+            margin: 0% 3% 2% 3%;
+        }
+
+        @include pantallaPanoramica {
+            margin: 0% 7% 2% 7%;
+        }
+    }
+
+    @include celularHorizontal {
+        margin: 18% 0% 3% 7%;
+        display: grid;
+        grid-template-areas:
+        "productos productos"
+        "imagenes  imagenes"
+        "imagenes  imagenes"
+        "imagenes  imagenes"
+        "imagenes  imagenes";
+    }
+
+    @include pantallaMediana {
+        margin: 15% 0% 3% 7%;
+    }
+
+    @include pantallaGrande {
+        margin: 22% 0% 0% 0%;
+        display: grid;
+        grid-template-areas:
+        "productos productos productos"
+        "imagenes  imagenes  imagenes"
+        "imagenes  imagenes  imagenes"
+        "imagenes  imagenes";
+    }
+
+    @include pantallaPanoramica {
+        margin: 15% 0% 0% 0%;
+        display: grid;
+        grid-template-areas:
+        "productos productos productos productos"
+        "imagenes  imagenes  imagenes  imagenes"
+        "imagenes  imagenes  imagenes  imagenes";
+    }
+}

@@ -1,0 +1,144 @@
+/*MOBILE FIRST (teléfono pequeño 320px)*/
+
+/* estilos header */
+header {
+        position: fixed;
+        background-color: $colorFondoHeader;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        z-index: 2;
+
+        h3   {
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 200;
+                font-size: 0.7rem;
+                font-style: normal;
+                text-align: center;
+                background-color: #434343;
+                background-size: cover;
+                padding: 0.4%;
+
+                @include pantallaGrande {
+                        font-size: 0.8rem;
+                        padding: 0.4% 0%;
+                }
+        }
+
+        .container-fluid {
+                margin-bottom: -2%;
+
+                ul {
+                        @include letras;
+
+                        li {
+                                display: flex;
+                                justify-content: center;
+                                margin: 0% 2% 0% 2%;
+
+                                a {
+                                        &:hover {
+                                                color: black;
+                                        }
+                                }
+                        }
+                }
+
+                .logoyBuscar {
+                        margin: 0%;
+
+                        h1 {
+                                color: black;
+                                font-family: 'Barlow', sans-serif;
+                                font-weight: 1000;
+                                font-size: 3rem;
+                                font-style: normal;
+                                text-align: center;
+                                margin-top: 8%;
+        
+                                @include barraBusqueda {
+                                        padding: 1.3% 1.3% 1.3% 3%;
+                                        margin-top: 0%;
+                                }
+        
+                                @include pantallaGrande {
+                                        font-size: 4rem;
+                                        margin: 0% 16% 2% 0%;
+                                        width: 90%;
+                                        text-align: right;
+                                }
+                        }
+
+                        form {
+                                margin-left: 7%;
+                                font-family: 'Montserrat', sans-serif;
+
+                                .form-control {
+                                        font-size: 0.8rem;
+                                        &:focus {
+                                                box-shadow: none;
+                                                border-color: #EED6C4;
+                                        }
+                                }
+                                button {
+                                        @extend .form-control;
+                                }
+
+                                .btn-outline-success {
+                                        color: black;
+                                        border-color: #EED6C4;
+                                        &:hover {
+                                                background-color: #EED6C4;
+                                        }
+                                }
+
+                                @include pantallaGrande {
+                                        width: 30%;
+                                }
+                        }
+
+                        .d-flex {
+                                visibility: hidden;
+
+                                @include barraBusqueda {
+                                        visibility: visible;
+                                }
+                        }
+
+                        @include barraBusqueda {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                        }
+
+                        @include pantallaGrande {
+                                width: 100%;
+                        }
+                }
+
+                @include pantallaGrande {
+                        margin-top: 0%;
+                        display: flex;
+                        flex-direction: column;
+
+                        #navbarSupportedContent {
+                                display: flex;
+                                justify-content: center;
+                                white-space: nowrap;
+                                margin-bottom: 3%;
+
+                                ul {
+                                        display: flex;
+                                        justify-content: center;
+                                        margin-left: 5%;
+                                }
+                        }
+                }
+        }
+
+        .palabraSeleccionada {
+                background-color: #EED6C4;
+        }
+}

@@ -1,0 +1,299 @@
+/* estilos main index */
+body {
+    z-index: 1;
+}
+.carousel {
+    width: 100%;
+    z-index: 1;
+    .carouselFotos {
+        width: 100%;
+        margin: 40% 0% 1% 0%;
+
+        @include barraBusqueda {
+            margin: 20% 0% 1% 0%;
+        }
+
+        @include pantallaMediana {
+            margin: 10% 0% 1% 0%;
+        }
+
+        @include pantallaGrande {
+            width: 100%;
+            margin: 15% 0% 1% 0%;
+        }
+    }
+
+    .carousel-control-next-icon {
+        margin-top: 160%;
+
+        @include barraBusqueda {
+            margin-top: 50%;
+        }
+    }
+
+    .carousel-control-prev-icon {
+        margin-top: 160%;
+
+        @include barraBusqueda {
+            margin-top: 50%;
+        }
+    }
+
+    @include pantallaGrande {
+        width: 100%;
+    }
+}
+
+.aclaraciones {
+    width: 100%;
+    background-color: $colorFondoAclaraciones;
+    display: flex;
+    flex-direction: column;
+
+    .aclaracion1 {
+        width: 100%;
+        margin: 0%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            color: white;
+            margin-right: 5%;
+
+            @include pantallaGrande {
+                margin-right: 10%;
+            }
+        }
+
+        div {
+            margin: 5% 0% 5% 0%;
+            display: flex;
+            display: inline-block;
+            align-items: center;
+    
+            p {
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 0.8rem;
+                font-style: normal;
+                text-align: center;
+    
+                @include pantallaGrande {
+                    font-size: 1rem;
+                }
+    
+                @include pantallaPanoramica {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        @include pantallaGrande {
+            margin: 0% 5% 0% 0%;
+            justify-content: space-evenly;
+        }
+    }
+
+    @include pantallaGrande {
+        width: auto;
+        padding: 3% 0.4% 3% 0.4%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.destacados {
+    margin: 0% 0% 5% 2%;
+    @include celularHorizontal {
+        margin: 0%;
+    }
+
+    h2 {
+        @include letras;
+        text-align: center;
+        margin: 4% 0% 3% 2%;
+        font-weight: 1300;
+        font-size: 1rem;
+
+        @include pantallaGrande {
+            margin: 2% 0% 1% 0%;
+            font-size: 1.5rem;
+        }
+    }
+
+    .productosDestacados {
+        margin: 2% 0% 1% 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    div {
+        margin: 1% 0% 5% 0%;
+        flex-wrap: wrap;
+        width: 100%;
+
+        picture {
+            width: 100%;
+
+            @include pantallaGrande {
+                height: 100%;
+            }
+        }
+
+        img {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include celularHorizontal {
+            margin: 1% 2% 2% 1%;
+        }
+
+        @include pantallaGrande {
+            margin: 1% 1% 1% 1%;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .card div {
+        .card-text {
+            @include letras;
+            margin-bottom: 6%;
+        }
+
+        h5 {
+            @extend .card-text;
+        }
+
+        .cuotas {
+            font-size: 0.9rem;
+            @include letras;
+        }
+
+        .btn {
+            background-color: #EED6C4;
+            color: white;
+            border: none;
+
+            &:focus {
+                box-shadow: none;
+                border-color: #EED6C4;
+            }
+
+            @include pantallaGrande {
+                & :hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    li {
+        list-style: none;
+        text-align: center;
+        margin: 0% 0% 3% 1%;
+
+        a {
+            @include letras;
+            font-size: 0.8rem;
+            padding: 0.4%;
+            border: 0.1rem solid #EED6C4;
+
+            @include pantallaGrande {
+                font-size: 1.1rem;
+            }
+        }
+
+        @include pantallaGrande {
+            margin: 2% 0% 3% 0%;
+
+            & :hover {
+                color: grey;
+            }
+        }
+    }
+
+    @include pantallaGrande {
+        margin-right: 2%;
+    }
+
+    @include pantallaPanoramica {
+        margin: 0%;
+    }
+}
+
+.instagram {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    background-color: $colorFondoInstagram;
+    padding: 5% 0% 5% 0%;
+
+    .tituloYLogoInstagram {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            min-height: 200%;
+            color: #434343;
+        }
+
+        h3 {
+            @include letras;
+            font-weight: bolder;
+            font-size: 1rem;
+            margin: 0.7%;
+    
+            @include pantallaGrande {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p {
+        @include letras;
+        font-size: 0.7rem;
+        margin: 1% 0% 2% 0%;
+
+        @include pantallaGrande {
+            font-size: 0.9rem;
+            font-style: normal;
+            margin: 0% 0% 0.9% 0%;
+        }
+    }
+
+    li {
+        a {
+            @include letras;
+            font-size: 0.8rem;
+            padding: 0.1% 0.5% 0.1% 0.5%;
+            border: 0.1rem solid #434343;
+            border-radius: 1rem;
+
+            @include pantallaGrande {
+                font-size: 1rem;
+            }
+        }
+
+        @include pantallaGrande {
+            & :hover {
+                color: grey;
+            }
+        }
+    }
+    
+
+    @include pantallaGrande {
+        width: auto;
+        padding: 1.5% 0% 2.3% 0%;
+    }
+}

@@ -1,0 +1,338 @@
+/* estilos TODOS los productos */
+.padreProductos {
+    margin: 35% 0% 10% 12%;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-areas: 
+    "imagenProducto"
+    "detalleProducto";
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+
+    .imagenProducto {
+        grid-area: imagenProducto;
+
+        .carousel-control-next {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .carouselProductos {
+        display: flex;
+        justify-content: center;
+        margin: 0% 1% 8% 0%;
+        width: 100%;
+
+        @include pantallaGrande {
+            margin-top: 12%;
+        }
+
+        @include pantallaPanoramica {
+            margin-top: 0%;
+        }
+    }
+
+    .detalleProducto {
+        grid-area: detalleProducto;
+        justify-content: center;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: -10%;
+
+        h2 {
+            font-weight: 10%;
+            font-size: 1.2rem;
+            font-style: normal;
+            margin-bottom: 6%;
+
+            @include celularHorizontal {
+                font-size: 1.5rem;
+            }
+
+            @include pantallaGrande {
+                font-size: 1rem;
+            }
+
+            @include pantallaPanoramica {
+                font-size: 1.5rem;
+            }
+        }
+
+        .detalleProducto1 {
+            margin-bottom: 6%;
+        }
+
+        .precio {
+            font-size: 1.2rem;
+            margin-bottom: 6%;
+
+            @include celularHorizontal {
+                font-size: 1.5rem;
+            }
+
+            @include pantallaGrande {
+                font-size: 1rem;
+            }
+
+            @include pantallaPanoramica {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            margin-bottom: 4%;
+
+            @include celularHorizontal {
+                font-size: 1rem;
+            }
+
+            @include pantallaGrande {
+                font-size: 0.7rem;
+            }
+
+            @include pantallaPanoramica {
+                font-size: 1rem;
+            }
+        }
+
+        .formularioProducto {
+            margin: 0% 0% 6% 0%;
+
+            .botones {
+                display: flex;
+                flex-direction: row;
+                font-size: 0.8rem;
+
+                .boton1 {
+                    margin-right: 4%;
+
+                    .form-select {
+                        font-size: 0.8rem;
+                        margin-top: 10%;
+
+                        &:focus {
+                            box-shadow: none;
+                            border-color: #EED6C4;
+                        }
+
+                        @include celularHorizontal {
+                            font-size: 1rem;
+                        }
+
+                        @include pantallaGrande {
+                            font-size: 0.7rem;
+                        }
+
+                        @include pantallaPanoramica {
+                            font-size: 1rem;
+                            margin-top: 12%;
+                        }
+                    }
+
+                    .form-label {
+                        font-size: 0.8rem;
+
+                        @include celularHorizontal {
+                            font-size: 1rem;
+                        }
+
+                        @include pantallaGrande {
+                            font-size: 0.7rem;
+                        }
+
+                        @include pantallaPanoramica {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .boton2 {
+                    .form-select {
+                        font-size: 0.8rem;
+                        margin-top: 8%;
+
+                        &:focus {
+                            box-shadow: none;
+                            border-color: #EED6C4;
+                        }
+
+                        @include celularHorizontal {
+                            font-size: 1rem;
+                        }
+
+                        @include pantallaGrande {
+                            font-size: 0.7rem;
+                        }
+
+                        @include pantallaPanoramica {
+                            font-size: 1rem;
+                            margin-top: 10%;
+                        }
+                    }
+
+                    .form-label {
+                        @extend .form-label;
+
+                        @include celularHorizontal {
+                            font-size: 1rem;
+                        }
+
+                        @include pantallaGrande {
+                            font-size: 0.7rem;
+                        }
+
+                        @include pantallaPanoramica {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                @include celularHorizontal {
+                    font-size: 1rem;
+                }
+
+                @include pantallaGrande {
+                    font-size: 0.7rem;
+                }
+
+                @include pantallaPanoramica {
+                    font-size: 1rem;
+                }
+            }
+
+            .botones2 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+
+                div {
+                    margin-right: 2%;
+                }
+
+                label {
+                    font-size: 0.8rem;
+                    margin-top: 3%;
+
+                    @include celularHorizontal {
+                        font-size: 1rem;
+                    }
+
+                    @include pantallaGrande {
+                        font-size: 0.7rem;
+                    }
+
+                    @include pantallaPanoramica {
+                        font-size: 1rem;
+                        margin-top: 8%;
+                    }
+                }
+
+                input {
+                    &:focus {
+                        box-shadow: none;
+                        border-color: #EED6C4;
+                    }
+                }
+
+                button {
+                    @include botones;
+                    font-size: 0.8rem;
+
+                    @include celularHorizontal {
+                        font-size: 1rem;
+                    }
+
+                    @include pantallaGrande {
+                        font-size: 0.7rem;
+                    }
+
+                    @include pantallaPanoramica {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .codigoPostal {
+            width: 50%;
+            border: rgb(226, 226, 226) solid 0.0001rem;
+            border-radius: 5%;
+            padding: 1%;
+            font-size: 0.8rem;
+
+            @include celularHorizontal {
+                font-size: 1rem;
+            }
+
+            @include pantallaGrande {
+                font-size: 0.7rem;
+            }
+
+            @include pantallaPanoramica {
+                font-size: 1rem;
+            }
+        }
+
+        .calcularEnvio {
+            input {
+                :focus {
+                        box-shadow: none;
+                        border-color: #EED6C4;
+                }
+            }
+            button {
+                @include botones;
+                font-size: 0.8rem;
+
+                @include celularHorizontal {
+                    font-size: 1rem;
+                }
+
+                @include pantallaGrande {
+                    font-size: 0.7rem;
+                }
+
+                @include pantallaPanoramica {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        @include celularHorizontal {
+            margin-left: -5%;
+        }
+
+        @include pantallaGrande {
+            margin: 17% 0% 0% -10%;
+        }
+
+        @include pantallaPanoramica {
+            margin: 0% 0% 0% -25%;
+        }
+    }
+
+    @include celularHorizontal {
+        margin: 20% 0% 10% 15%;
+    }
+
+    @include pantallaMediana {
+        margin: 15% 0% 5% 15%;
+    }
+
+    @include pantallaGrande {
+        margin: 17% 0% 3% 0%;
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-areas: 
+        "imagenProducto detalleProducto"
+        "imagenProducto detalleProducto";
+        grid-template-columns: 0.7fr;
+        justify-content: center;
+    }
+
+    @include pantallaPanoramica {
+        margin: 18% 0% 1% 0%;
+    }
+}

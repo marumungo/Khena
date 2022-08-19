@@ -1,0 +1,174 @@
+/* estilos footer */
+footer {
+    width: 100%;
+    background-color: $colorFondoFooter;
+    background-size: cover;
+    color: $colorLetrasFooter;
+    text-align: center;
+    list-style: none;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        margin: 5% 10% 5% 10%;
+
+        .contactanosFooter {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            @include pantallaGrande {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
+        .redesSocialesFooter {
+            @extend .contactanosFooter;
+
+            @include pantallaGrande {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
+        li {
+            margin-bottom: 7%;
+    
+            a {
+                color: $colorLetrasFooter;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 0.6rem;
+                font-style: normal;
+                text-decoration: none;
+
+                @include pantallaGrande {
+                    font-size: 0.8rem;
+                }
+            }
+
+            @include pantallaGrande {
+                margin-bottom: 7%;
+
+                & :hover {
+                    color: grey;
+                }
+            }
+        }
+
+        .email {
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.6rem;
+            font-style: normal;
+            text-align: center;
+
+            .form-control {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 0.6rem;
+                font-style: normal;
+                margin-bottom: 7%;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: #EED6C4;
+                }
+
+                @include pantallaGrande {
+                    font-size: 0.7rem;
+                }
+            }
+
+            button {
+                @extend .form-control;
+            }
+
+            .btn-outline-success {
+                border-color: #EED6C4;
+                background-color: #EED6C4;
+                color: black;
+                font-size: 0.7rem;
+
+                &:hover {
+                    color: white;
+            }
+            }
+
+            @include pantallaGrande {
+                font-size: 0.8rem;
+            }
+        }
+
+        .contactoFooter {
+            display: flex;
+            flex-direction: row;
+            justify-items: left;
+
+            i {
+                margin-right: 10%;
+            }
+
+            @include pantallaGrande {
+                margin-left: 13%;
+            }
+        }
+
+        .redSocialFooter {
+            display: flex;
+            flex-direction: row;
+            justify-items: left;
+            align-items: center;
+
+            i {
+                margin-right: 10%;
+            }
+
+            @include pantallaGrande {
+                margin: 0%;
+            }
+        }
+
+        @include pantallaGrande {
+            margin: 0% 10% 0% 10%;
+        }
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 0.8rem;
+        font-style: normal;
+        margin-bottom: 15%;
+
+        @include pantallaGrande {
+            font-size: 1rem;
+        }
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 0.6rem;
+        font-style: normal;
+        margin-bottom: 7%;
+
+        @include pantallaGrande {
+            font-size: 0.8rem;
+        }
+    }
+
+    @include pantallaGrande {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

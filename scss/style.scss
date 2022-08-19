@@ -1,0 +1,15 @@
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/coloresYTipografias";
+@import "./utilities/reseteo";
+@import "./utilities/mediaQueries";
+
+
+@import "./layout/header";
+@import "./layout/mainIndex";
+@import "./layout/mainProductos";
+@import "./layout/mainTablaDeTalles";
+@import "./layout/mainEnvios";
+@import "./layout/mainContacto";
+@import "./layout/mainTodosLosProductos";
+@import "./layout/footer";
